@@ -15,18 +15,18 @@ public class Controller {
     }
 
     private void osszesfilmKiirasa() {
-//        String uzenet = "\n\tÖsszes film:\n";
-//        for (Film film : modell.getFilmek()) {
-//            uzenet += film + "\n";
-//        }
-//        konzolnezet.megjelenit(uzenet);
-        String uzenet = "";
-        
-        List<Film> filmek = modell.getFilmek();
-
-        uzenet = filmek.toString();
-        
-        this.konzolnezet.megjelenit(uzenet);
+        String uzenet = "\n\tÖsszes film:\n";
+        for (Film film : modell.getFilmek()) {
+            uzenet += film + "\n";
+        }
+        konzolnezet.megjelenit(uzenet);
+//        String uzenet = "";
+//        
+//        List<Film> filmek = modell.getFilmek();
+//
+//        uzenet = filmek.toString();
+//        
+//        this.konzolnezet.megjelenit(uzenet);
         
     }
     
