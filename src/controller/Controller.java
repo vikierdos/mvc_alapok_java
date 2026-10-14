@@ -12,16 +12,22 @@ public class Controller {
     public Controller(Filmek modell, KonzolNezet konzolnezet) {
         this.modell = modell;
         this.konzolnezet = konzolnezet;
-        String uzenet = "";
-        
-//        for (Film film : this.filmek.getFilmek()) {
+    }
+
+    private void osszesfilmKiirasa() {
+//        String uzenet = "\n\tÖsszes film:\n";
+//        for (Film film : modell.getFilmek()) {
 //            uzenet += film + "\n";
 //        }
+//        konzolnezet.megjelenit(uzenet);
+        String uzenet = "";
+        
         List<Film> filmek = modell.getFilmek();
 
         uzenet = filmek.toString();
         
         this.konzolnezet.megjelenit(uzenet);
+        
     }
     
     
