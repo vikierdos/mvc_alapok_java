@@ -12,9 +12,12 @@ public class Controller {
     public Controller(Filmek modell, KonzolNezet konzolnezet) {
         this.modell = modell;
         this.konzolnezet = konzolnezet;
+        
+        osszesfilmKiirasa();
+        legtobbPontuFilm();
     }
 
-    private void osszesfilmKiirasa() {
+    public void osszesfilmKiirasa() {
         String uzenet = "\n\tÖsszes film:\n";
         for (Film film : modell.getFilmek()) {
             uzenet += film + "\n";
@@ -28,6 +31,19 @@ public class Controller {
 //        
 //        this.konzolnezet.megjelenit(uzenet);
         
+    }
+    
+    public void legtobbPontuFilm(){
+        List<Film> filmek = modell.getFilmek();
+        int legtobbPontuIndex = 0;
+        for (int i = 0; i < filmek.size(); i++) {
+            if(filmek.get(i).getPont() > filmek.get(legtobbPontuIndex).getPont()){
+                legtobbPontuIndex = i;
+            }
+        }
+        String uzenet = "A legtöbb pontú film címe: " + filmek.get(legtobbPontuIndex).getCim();
+        
+        konzolnezet.megjelenit(uzenet);
     }
     
     
