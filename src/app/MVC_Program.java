@@ -1,5 +1,6 @@
 package app;
 
+import controller.Controller;
 import nezet.KonzolNezet;
 import modell.Filmek;
 
@@ -7,7 +8,9 @@ import modell.Filmek;
 public class MVC_Program {
 
     public static void main(String[] args) {
-       new KonzolNezet(new Filmek()).megjelenit();
+       Filmek filmek = new Filmek();
+       KonzolNezet konzolnezet = new KonzolNezet();
+       Controller controller = new Controller(filmek, konzolnezet);
     }
     
 }
